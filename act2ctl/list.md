@@ -4,9 +4,17 @@ idc command [options]
 
  
 
+Command：
+
+idc
+
+proxy
+
+host
+
 Options：
 
--l -- 列出所有的idc
+-l    列出所有的idc
 
  
 
