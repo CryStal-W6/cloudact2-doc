@@ -1,20 +1,22 @@
 # 查看信息
 
-idc command [options]
+idc command 
 
- 
+
+
+
 
 Command：
 
-idc
+idc list    
 
-proxy
+proxy list    
 
-host
+proxy del    
 
-Options：
+host list    
 
--l    列出所有的idc
+host report    
 
  
 
