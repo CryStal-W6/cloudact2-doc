@@ -2,7 +2,7 @@
 
 ##文件下发
 
-file send [ip_list] src target [options]
+act2ctl file send [ip_list] src target [options]
 
 通过act2服务下发文件到远程服务器上，ip_list以英文逗号分割的ip地址列表，为远程服务器地址
 
@@ -55,7 +55,7 @@ Options：
 
 ##命令、脚本执行
 
-run [options] [ip_list]
+act2ctl run [options] [ip_list]
 
 通过act2服务下发命令或者脚本到远程服务器上，并进行执行, ip_list以英文逗号分割的ip地址列表，为远程服务器地址，可放在命令行任意位置，一般放在尾部
 

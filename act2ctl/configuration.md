@@ -1,6 +1,6 @@
 # 配置
 
-config add [options] <cluster_server>
+act2ctl config add [options] <cluster_server>
 
 配置act2的服务器访问地址。cluster_server是act2的集群对外暴露的服务地址，相关配置信息会存储在~/.act2.yaml文件中
 
