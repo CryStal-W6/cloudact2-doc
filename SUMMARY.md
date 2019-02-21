@@ -16,5 +16,5 @@
     * [查看任务信息](act2ctl/record.md)
 * [API接口](api/README.md)
 * [附录](other/README.md)
-    - [salt搭建](other/salt.md)
+    * [salt搭建](other/salt.md)
 
