@@ -2,7 +2,7 @@
 
 ##文件下发
 
-file [ip_list] src target [options]
+file send [ip_list] src target [options]
 
 通过act2服务下发文件到远程服务器上，ip_list以英文逗号分割的ip地址列表，为远程服务器地址
 
@@ -12,7 +12,7 @@ Options：
 
 -H hostfile    指定要下发执行的远程服务器地址，与ip_list互斥
 
--t type    下发时指定通道类型，type可以为salt或puppet或ssh，目前支持salt或ssh，默认为salt
+-t type    下发时指定通道类型，type可以为salt或ssh，默认为salt
 
 -s scriptType    脚本类型，支持bash或bat或python或sls，默认为bash。如果提供了系统类型，在Windows下默认为bat，其他默认为bash
 
@@ -38,7 +38,7 @@ Options：
 
 -e encoding    指定执行时编码类型，支持gb18030或utf-8，如果未指定，在系统类型为windows时默认为gb18030，其他系统默认账户为utf-8
 
--v    verbose，输出调试信息
+-v --verbose    输出调试信息
 
 --async    异步处理，返回作业执行任务id
 
@@ -46,11 +46,12 @@ Options：
 
 示例：
 
+```bash
+./act2ctl file send 192.168.1.1,192.168.1.2 test.txt /root/test.txt
+./act2ctl file send -H hostfile test.txt /root/test.txt
+```
 
 
-
-
- 
 
 ##命令、脚本执行
 
@@ -92,7 +93,7 @@ Options:
 
 -ouput format    输出格式，支持 default或json或yaml，其中默认为default，支持高亮输出，json或yaml输出无高亮
 
--v, --verbose    输出调试信息
+-v  --verbose    输出调试信息
 
 --async    异步处理，返回作业执行任务id
 
@@ -102,16 +103,25 @@ Options:
 
 指定IP地址执行命令（使用默认salt通道）
 
-
+```bash
+./act2ctl run 192.168.1.1 -C 'df -h'
+```
 
 指定IP执行脚本并添加参数（使用默认salt通道）
 
-
+```bash
+./act2ctl run 192.168.1.1 -f test.sh -a "hello act2"
+```
 
 指定IP执行脚本并添加参数（使用SSH通道）
 
-
+```bash
+./act2ctl run 192.168.1.1 -t ssh -f test.sh -a "hello act2" -o linux -c hangzhou
+```
 
 异步任务（使用SSH通道）
 
- 
+ ```bash
+./act2ctl run 192.168.1.1 -t ssh -f test.sh -a "hello act2" -o linux -c hangzhou --async
+ ```
+

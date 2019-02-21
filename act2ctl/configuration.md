@@ -30,8 +30,9 @@ config show
 
 示例：
 
+```bash
 ./act2ctl config add -c <http://192.168.1.1:6868>
-
 ./act2ctl config show
+```
 
  

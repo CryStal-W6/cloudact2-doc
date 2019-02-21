@@ -10,7 +10,6 @@
 * [环境搭建](environment/README.md)
 * [编译](compile/README.md)
 * [Salt搭建](salt/README.md)
-* [配置使用](configuration/README.md)
 * [act2ctl如何使用](act2ctl/README.md)
     * [配置](act2ctl/configuration.md)
     * [查看信息](act2ctl/list.md)
